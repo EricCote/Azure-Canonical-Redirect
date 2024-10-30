@@ -1,9 +1,9 @@
-const express = require("express");
+const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
-const site = process.env.CANONICAL_SITE || "https://www.reactacademy.live";
+const site = process.env.CANONICAL_SITE || 'https://www.reactacademy.live';
 
-app.get("*", (req, res) => {
+app.get('*', (req, res) => {
   res.redirect(site + req.path);
 });
 
